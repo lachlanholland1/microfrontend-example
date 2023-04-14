@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { ModuleFederationPlugin } = require("webpack").container;
+const packageJson = require("./package.json");
 
 module.exports = {
   mode: "development",
@@ -9,25 +10,25 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "./build"),
-    publicPath: "http://localhost:8080/",
+    publicPath: "http://localhost:8081/",
     filename: "[name].bundle.js",
     clean: true,
   },
   devServer: {
-    port: 8080,
+    port: 8081,
     open: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Host",
+      title: "Microfrontend1",
       template: path.resolve(__dirname, "./src/template.html"),
       filename: "index.html",
     }),
     new ModuleFederationPlugin({
-      name: "host",
-      remotes: {
-        microfrontend1:
-          "microfrontend1@http://localhost:8081/microfrontend1.js",
+      name: "microfrontend1",
+      filename: "microfrontend1.js",
+      exposes: {
+        "./Button": path.resolve(__dirname, "./src/components/Button.js"),
       },
     }),
   ],
