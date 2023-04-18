@@ -6,5 +6,4 @@
 
 ## toDO
 
-- Look at the limitations of using NextJS for host
 - Look at the limitations of using NextFederationPlugin for host
