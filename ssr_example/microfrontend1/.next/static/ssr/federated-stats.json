@@ -1,1 +1,0 @@
-{"sharedModules":[],"federatedModules":[{"remote":"microfrontend1","entry":"static/chunks/microfrontend1.js","sharedModules":[],"exposes":{"./Button":[]},"remoteModules":{}}]}
