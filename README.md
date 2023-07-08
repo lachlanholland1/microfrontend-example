@@ -1,4 +1,4 @@
-# Example Microfrontends with Webpack Module Federation
+# Microfrontends with Webpack Module Federation
 
 Contains client-side and server-side microfrontend examples. Both examples are using Webpack Module Federation under the hood, however to achieve server-side rendering with Webpack Module Federation the server-side example uses the Next Module Federation plugin.
 
