@@ -1,6 +1,6 @@
 # Microfrontend's with Webpack Module Federation
 
-Contains a client-side and server-side microfrontend example.
+Contains client-side and server-side microfrontend examples.
 
 1. yarn install in project root
 2. Go to host folder and do yarn dev
